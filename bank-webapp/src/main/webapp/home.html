@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bank Dashboard — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <h1>MyBank</h1>
+        <p class="tag">Bank Management System</p>
+      </div>
+      <nav class="profile">
+        <button id="profileBtn" class="icon-btn">Profile</button>
+      </nav>
+    </header>
+
+    <section class="container">
+      <h2 class="section-title">Welcome back, <span id="userName">Rahul</span></h2>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-head">
+            <h3>Managing Accounts</h3>
+            <p class="muted">Deposit, withdraw and check balances</p>
+          </div>
+          <div class="card-body actions-vertical">
+            <button class="action btn-primary" id="depositBtn">Deposit</button>
+            <button class="action btn-outline" id="withdrawBtn">Withdrawal</button>
+            <button class="action btn-ghost" id="balanceBtn">Check Balance</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>SIP (Systematic Investment Plan)</h3>
+            <p class="muted">Create & manage recurring investments</p>
+          </div>
+          <div class="card-body">
+            <p class="muted small">Monthly auto-debits, expected returns & schedule</p>
+            <div class="card-footer">
+              <button class="action btn-primary" id="createSipBtn">Create SIP</button>
+              <button class="action btn-outline" id="viewSipBtn">View SIPs</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Fixed Deposit (FD)</h3>
+            <p class="muted">Create fixed deposits & view maturity</p>
+          </div>
+          <div class="card-body">
+            <p class="muted small">Pick tenure, interest rate & keep funds safe</p>
+            <div class="card-footer">
+              <button class="action btn-primary" id="createFdBtn">Create FD</button>
+              <button class="action btn-outline" id="viewFdBtn">View FDs</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Payment Options</h3>
+            <p class="muted">Choose how you'd like to pay or transfer</p>
+          </div>
+          <div class="card-body">
+            <ul class="payment-list">
+              <li>• UPI / QR Pay</li>
+              <li>• NEFT / RTGS</li>
+              <li>• IMPS</li>
+              <li>• Debit Card / Netbanking</li>
+            </ul>
+            <div class="card-footer">
+              <button class="action btn-primary" id="paymentsBtn">Make Payment</button>
+              <button class="action btn-outline" id="paymentHistoryBtn">Payment History</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

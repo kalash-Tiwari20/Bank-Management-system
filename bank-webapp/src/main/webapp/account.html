@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Create Account — Bank</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card-header">
+        <h1>Create Account</h1>
+        <p class="subtitle">Fill the form below to open a new bank account</p>
+      </header>
+
+      <form id="accountForm" class="form" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="firstName">Name</label>
+            <input id="firstName" name="firstName" type="text" placeholder="First name" required>
+            <small class="hint" data-for="firstName"></small>
+          </div>
+
+          <div class="field">
+            <label for="lastName">Surname</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Surname" required>
+            <small class="hint" data-for="lastName"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" placeholder="House / Street / City / State / PIN" rows="3"></textarea>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="10-digit phone" >
+            <small class="hint" data-for="phone"></small>
+          </div>
+
+          <div class="field">
+            <label for="aadhaar">Aadhaar number</label>
+            <input id="aadhaar" name="aadhaar" type="text" inputmode="numeric" placeholder="12-digit Aadhaar" maxlength="12">
+            <small class="hint" data-for="aadhaar"></small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="pan">PAN card number</label>
+            <input id="pan" name="pan" type="text" placeholder="ABCDE1234F" maxlength="10">
+            <small class="hint" data-for="pan"></small>
+          </div>
+
+          <div class="field">
+            <label for="age">Age</label>
+            <input id="age" name="age" type="number" min="1" placeholder="Age">
+            <small class="hint" data-for="age"></small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="fatherName">Father's name</label>
+            <input id="fatherName" name="fatherName" type="text" placeholder="Father's full name">
+            <small class="hint" data-for="fatherName"></small>
+          </div>
+
+          <div class="field">
+            <label for="motherName">Mother's name</label>
+            <input id="motherName" name="motherName" type="text" placeholder="Mother's full name">
+            <small class="hint" data-for="motherName"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Gender</label>
+          <div class="todo-list" id="genderList" role="group">
+            <label class="todo"><input type="checkbox" name="gender" value="Male"><span class="checkmark"></span>Male</label>
+            <label class="todo"><input type="checkbox" name="gender" value="Female"><span class="checkmark"></span>Female</label>
+            <label class="todo"><input type="checkbox" name="gender" value="Transgender"><span class="checkmark"></span>Transgender</label>
+          </div>
+          <small class="hint" data-for="gender"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="email@example.com" required>
+          <small class="hint" data-for="email"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Choose a password" required>
+          <small class="hint" data-for="password"></small>
+        </div>
+
+        <div class="field">
+          <label for="accountType">Type of account</label>
+          <select id="accountType" name="accountType" required>
+            <option value="">Select account type</option>
+            <option value="Savings">Savings</option>
+            <option value="Current">Current</option>
+          </select>
+          <small class="hint" data-for="accountType"></small>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary" id="submitBtn">Submit</button>
+        </div>
+
+        <div id="result" class="result" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
